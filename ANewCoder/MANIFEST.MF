@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: lib\dom4j-1.6.1.jar lib\freemarker.jar lib\log4j-1.2.16.jar lib\ojdbc14-10.2.0.1.0.jar
+Main-Class: com.wamdy.coder.CodeMaker

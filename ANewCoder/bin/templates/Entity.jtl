@@ -1,0 +1,73 @@
+package ${package}.model;
+
+import java.util.Date;
+
+import cn.cmschina.spi.dbutils.autowork.constants.GenerateType;
+import cn.cmschina.spi.dbutils.binding.model.SingleKey;
+import jodd.db.oom.meta.DbColumn;
+import jodd.db.oom.meta.DbId;
+import jodd.db.oom.meta.DbTable;
+import jodd.db.type.TimestampSqlType;
+
+@DbTable("${tableName?upper_case}")
+@SingleKey(GenerateType.uuid)
+public class ${name} {
+	<#if (keyField.note?length>0)>
+	/**
+	 * ${keyField.note}
+	 */
+	</#if>
+	@DbId("${keyField.name?upper_case}")
+	private ${keyField.type} ${keyField.dbType};
+	<#list normalField as pro>
+	
+	<#if (pro.note?length > 0)>
+	/**
+	 * ${pro.note}
+	 */
+	</#if>
+	@DbColumn("${pro.name?upper_case}")
+	private ${pro.type} ${pro.dbType};
+	</#list>
+	
+	
+	public ${keyField.type} get${keyField.dbType?cap_first}() {
+		return ${keyField.dbType};
+	}
+	
+	public void set${keyField.dbType?cap_first}(${keyField.type} ${keyField.dbType}) {
+	<#switch keyField.type>
+		<#case "String">
+	    this.${keyField.dbType} = ${keyField.dbType} == null ? null : ${keyField.dbType}.trim();
+		<#break>
+	  	<#default>
+	    this.${keyField.dbType} = ${keyField.dbType};
+		<#break>
+	</#switch>
+	}
+	
+	<#list normalField as pro>
+	
+	<#if (pro.note?length > 0)>
+	/**
+	 * ${pro.note}
+	 */
+	</#if>
+	public ${pro.type} get${pro.dbType?cap_first}() {
+		return ${pro.dbType};
+	}
+
+	public void set${pro.dbType?cap_first}(${pro.type} ${pro.dbType}) {
+	<#switch pro.type>
+		<#case "String">
+	    this.${pro.dbType} = ${pro.dbType} == null ? null : ${pro.dbType}.trim();
+		<#break>
+	  	<#default>
+	    this.${pro.dbType} = ${pro.dbType};
+		<#break>
+	</#switch>
+	}
+	</#list>
+
+	
+}

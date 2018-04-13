@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entitys xmlns="http://www.wamdy.com/entitys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wamdy.com/entitys sample.xsd">
+	<entity>
+		<package>com.wamdy</package>
+		<name>User</name>
+		<asiaName>用户</asiaName>
+		<author>hzw</author>
+		<tableName>User</tableName>
+		<note>用户表</note>
+		<fields>
+			<keyField>
+			    <field>
+				    <isKey>true</isKey>
+					<name>user_id</name>
+					<type>String</type>
+					<asiaName>编号</asiaName>
+					<note>用户的主键</note>
+					<sortable>true</sortable>
+					<dbType>varchar</dbType>
+				</field>
+			</keyField>
+			<normalField>
+				<field>
+				    
+					<name>name</name>
+					<type>String</type>
+					<asiaName>用户名</asiaName>
+					<note>用户的姓名</note>
+					<sortable>true</sortable>
+					<dbType>varchar</dbType>
+				</field>
+			</normalField>
+		</fields>
+	</entity>
+</entitys>

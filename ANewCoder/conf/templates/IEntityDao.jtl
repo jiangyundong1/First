@@ -1,0 +1,12 @@
+package ${package}.dao;
+
+import cn.cmschina.ibp.client.client.model.${name};
+import cn.cmschina.spi.dbutils.autowork.mapper.SingleKeyMapper;
+import cn.cmschina.spi.dbutils.binding.model.Dao;
+
+
+@Dao
+public interface ${name}Dao extends SingleKeyMapper<${name}, String>{
+
+	
+}

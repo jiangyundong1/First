@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf8"?>
+
+<entitys xmlns="http://www.wamdy.com/entitys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wamdy.com/entitys entitys.xsd">
+    <entity>
+        <package>cn.cmschina.ibp.client.client</package>
+        <name>Menu</name>
+        <note>菜单</note>
+        <tableName>menu</tableName>
+        <fields>
+            <keyField>
+                <field>
+                    <name>id</name>
+                    <type>String</type>
+                    <dbType>id</dbType>
+                    <note>主键ID</note>
+                </field>
+            </keyField>
+            <normalField>
+                <field>
+                    <name>name</name>
+                    <type>String</type>
+                    <dbType>name</dbType>
+                    <note>姓名</note>
+                </field>
+                <field>
+                    <name>tel_phone</name>
+                    <type>Long</type>
+                    <dbType>telPhone</dbType>
+                    <note>电话号码</note>
+                </field>
+                <field>
+                    <name>create_time</name>
+                    <type>Date</type>
+                    <dbType>createTime</dbType>
+                    <note>创建时间</note>
+                </field>
+            </normalField>
+        </fields>
+    </entity>
+</entitys>

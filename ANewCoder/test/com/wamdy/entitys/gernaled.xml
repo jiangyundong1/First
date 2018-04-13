@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entitys xmlns="http://www.wamdy.com/entitys" >
+    <entity>
+        <package>com.wamdy</package>
+        <name>User</name>
+        <asiaName>用户</asiaName>
+        <author>hzw</author>
+        <tableName>user</tableName>
+    </entity>
+</entitys>

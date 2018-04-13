@@ -1,0 +1,1 @@
+修改entity.xml后运行该批处理，重新生成entity.xsd,并完善其它信息

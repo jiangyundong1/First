@@ -1,0 +1,15 @@
+package ${package}.service;
+
+import cn.cmschina.ibp.client.client.dao.${name}Dao;
+import cn.cmschina.ibp.client.client.model.${name};
+import cn.cmschina.ibp.dbutils.autowork.service.SingleKeyServiceImple;
+import jodd.petite.meta.PetiteInject;
+import jodd.petite.meta.PetiteBean;
+
+@PetiteBean  
+public class ${name}Service extends SingleKeyServiceImple<${name}, String> {
+
+	@PetiteInject
+	private ${name}Dao ${name?uncap_first}Dao;
+	
+}

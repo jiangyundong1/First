@@ -1,0 +1,1 @@
+xjc.exe sample.xsd
